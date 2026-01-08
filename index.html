@@ -1,196 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Shinedarr | Premium Jewelry Collection</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Elegant jewelry accessories for every woman. Handpicked designs, curated collections, and WhatsApp ordering.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Elegant jewelry accessories for every woman. Handpicked designs, curated collections, and WhatsApp ordering." />
+  <title>Shinedarr | Premium Jewelry Collection</title>
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="style.css">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" as="image" href="images/hero-bg.jpg">
 </head>
-
 <body>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <h1><i class="fas fa-gem" aria-hidden="true"></i> Shinedarr</h1>
+        <p class="tagline">Elegance Redefined</p>
+      </div>
 
-    <!-- Navigation with Glass Effect -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <h1><i class="fas fa-gem"></i> Shinedarr</h1>
-                <p class="tagline">Elegance Redefined</p>
-            </div>
-            
-            <button class="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <div class="nav-menu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#collections" class="nav-link">Collections</a>
-                <a href="#products" class="nav-link">Shop</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <!-- Hero Section with Glass Effect -->
-    <header class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="hero-glass">
-            <div class="hero-content">
-                <h1 class="hero-title">Elegant Accessories for Every Woman</h1>
-                <p class="hero-subtitle">Curated catalogues • Handpicked designs • Premium Quality</p>
-                <p class="hero-description">Discover our exclusive collection of fine jewelry that celebrates your unique style</p>
-                <a href="#products" class="hero-btn">Shop Now <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </header>
+      <div class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#collections" class="nav-link">Collections</a>
+        <a href="#products" class="nav-link">Shop</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Filter Categories -->
-    <section class="categories" id="collections">
-        <h2 class="section-title">Our Collections</h2>
-        <p class="section-subtitle">Browse through our exquisite jewelry categories</p>
-        
-        <div class="category-filters">
-            <button class="category-btn active" onclick="filterType('All',this)">
-                <i class="fas fa-star"></i> All Collections
-            </button>
-            <button class="category-btn" onclick="filterType('Necklace',this)">
-                <i class="fas fa-gem"></i> Necklaces
-            </button>
-            <button class="category-btn" onclick="filterType('Earring',this)">
-                <i class="fas fa-moon"></i> Earrings
-            </button>
-            <button class="category-btn" onclick="filterType('Bracelet',this)">
-                <i class="fas fa-heart"></i> Bracelets
-            </button>
-            <button class="category-btn" onclick="filterType('Ring',this)">
-                <i class="fas fa-circle"></i> Rings
-            </button>
-            <button class="category-btn" onclick="filterType('Keychain',this)">
-                <i class="fas fa-key"></i> Keychains
-            </button>
-        </div>
+  <header class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-glass">
+      <div class="hero-content">
+        <h1 class="hero-title">Elegant Accessories for Every Woman</h1>
+        <p class="hero-subtitle">Curated catalogues • Handpicked designs • Premium Quality</p>
+        <p class="hero-description">Discover our exclusive collection of fine jewelry that celebrates your unique style</p>
+        <a href="#products" class="hero-btn">Shop Now <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="categories" id="collections" aria-labelledby="collections-title">
+    <h2 id="collections-title" class="section-title">Our Collections</h2>
+    <p class="section-subtitle">Browse through our exquisite jewelry categories</p>
+    <div class="category-filters" role="tablist">
+      <button class="category-btn active" data-filter="All" role="tab" aria-selected="true">
+        <i class="fas fa-star" aria-hidden="true"></i> All Collections
+      </button>
+      <button class="category-btn" data-filter="Necklace" role="tab" aria-selected="false">
+        <i class="fas fa-gem" aria-hidden="true"></i> Necklaces
+      </button>
+      <button class="category-btn" data-filter="Earring" role="tab" aria-selected="false">
+        <i class="fas fa-moon" aria-hidden="true"></i> Earrings
+      </button>
+      <button class="category-btn" data-filter="Bracelet" role="tab" aria-selected="false">
+        <i class="fas fa-heart" aria-hidden="true"></i> Bracelets
+      </button>
+      <button class="category-btn" data-filter="Ring" role="tab" aria-selected="false">
+        <i class="fas fa-circle" aria-hidden="true"></i> Rings
+      </button>
+      <button class="category-btn" data-filter="Keychain" role="tab" aria-selected="false">
+        <i class="fas fa-key" aria-hidden="true"></i> Keychains
+      </button>
+    </div>
+  </section>
+
+  <main class="main-content">
+    <section class="products-container" id="products" aria-labelledby="products-title">
+      <h3 id="products-title" class="products-title">Featured Jewelry</h3>
+      <div class="products-grid" id="products-grid" role="list"></div>
     </section>
+  </main>
 
-    <!-- Products Grid -->
-    <main class="main-content">
-        <section class="products-container" id="products">
-            <h3 class="products-title">Featured Jewelry</h3>
-            <div class="products-grid" id="products-grid">
-                <!-- Products will be rendered here -->
-            </div>
-        </section>
-    </main>
+  <section class="features" aria-labelledby="features-title">
+    <h2 id="features-title" class="visually-hidden">Why Choose Us</h2>
+    <div class="feature">
+      <i class="fas fa-award" aria-hidden="true"></i>
+      <h4>Premium Quality</h4>
+      <p>Finest materials with exquisite craftsmanship</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-shipping-fast" aria-hidden="true"></i>
+      <h4>Free Shipping</h4>
+      <p>Free delivery on orders above ₹2999</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-shield-alt" aria-hidden="true"></i>
+      <h4>Secure Payment</h4>
+      <p>100% secure and safe payment options</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-headset" aria-hidden="true"></i>
+      <h4>24/7 Support</h4>
+      <p>Always available to assist you</p>
+    </div>
+  </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="feature">
-            <i class="fas fa-award"></i>
-            <h4>Premium Quality</h4>
-            <p>Finest materials with exquisite craftsmanship</p>
+  <footer id="contact" aria-labelledby="footer-title">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3 id="footer-title"><i class="fas fa-gem" aria-hidden="true"></i> Shinedarr</h3>
+        <p>Creating timeless jewelry pieces that tell your story.</p>
+        <div class="footer-contact">
+          <p><i class="fas fa-phone" aria-hidden="true"></i> +91 83030 85804</p>
+          <p><i class="fas fa-envelope" aria-hidden="true"></i> contact@shinedarr.com</p>
+          <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Mumbai, India</p>
         </div>
-        <div class="feature">
-            <i class="fas fa-shipping-fast"></i>
-            <h4>Free Shipping</h4>
-            <p>Free delivery on orders above ₹2999</p>
-        </div>
-        <div class="feature">
-            <i class="fas fa-shield-alt"></i>
-            <h4>Secure Payment</h4>
-            <p>100% secure and safe payment options</p>
-        </div>
-        <div class="feature">
-            <i class="fas fa-headset"></i>
-            <h4>24/7 Support</h4>
-            <p>Always available to assist you</p>
-        </div>
-    </section>
+      </div>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3><i class="fas fa-gem"></i> Shinedarr</h3>
-                <p>Creating timeless jewelry pieces that tell your story.</p>
-                <div class="footer-contact">
-                    <p><i class="fas fa-phone"></i> +91 83030 85804</p>
-                    <p><i class="fas fa-envelope"></i> contact@shinedarr.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Mumbai, India</p>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#collections">Collections</a></li>
-                    <li><a href="#products">Shop</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Connect With Us</h4>
-                <div class="social-links">
-                    <a href="https://wa.me/918303085804" target="_blank" class="social-btn whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.instagram.com/aesthetic_chikan23/" target="_blank" class="social-btn instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com" target="_blank" class="social-btn facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.pinterest.com" target="_blank" class="social-btn pinterest">
-                        <i class="fab fa-pinterest-p"></i>
-                    </a>
-                </div>
-                <p class="newsletter-text">Subscribe for exclusive offers</p>
-                <div class="newsletter">
-                    <input type="email" placeholder="Your email address">
-                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                </div>
-            </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#products">Shop</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect With Us</h4>
+        <div class="social-links">
+          <a href="https://wa.me/918303085804" target="_blank" rel="noopener" class="social-btn whatsapp" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/aesthetic_chikan23/" target="_blank" rel="noopener" class="social-btn instagram" aria-label="Follow on Instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-btn facebook" aria-label="Visit on Facebook">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.pinterest.com" target="_blank" rel="noopener" class="social-btn pinterest" aria-label="View on Pinterest">
+            <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+          </a>
         </div>
-        
-        <div class="footer-bottom">
-            <p>© 2024 Shinedarr. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Shipping Policy</a>
-                <a href="#">Return Policy</a>
-            </div>
-        </div>
-    </footer>
+        <p class="newsletter-text">Subscribe for exclusive offers</p>
+        <form class="newsletter" id="newsletterForm">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+        </form>
+      </div>
+    </div>
 
-    <!-- Floating WhatsApp Button -->
-    <a class="floating-wa" href="https://wa.me/918303085804" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <div class="footer-bottom">
+      <p>© 2024 Shinedarr. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Shipping Policy</a>
+        <a href="#">Return Policy</a>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+  <a class="floating-wa" href="https://wa.me/918303085804" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
 
-    <script src="script.js"></script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
